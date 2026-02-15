@@ -3,7 +3,9 @@
 	"package": "org.trivait.blackwhitepalegarden.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-
+	],
+	"client": [
+		"GameRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

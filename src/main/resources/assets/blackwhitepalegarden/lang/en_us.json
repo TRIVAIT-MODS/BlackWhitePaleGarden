@@ -1,0 +1,6 @@
+{
+  "text.autoconfig.bwpg.title": "GrayScale Pale Garden",
+  "text.autoconfig.bwpg.option.needNight": "Only at night",
+  "text.autoconfig.bwpg.option.needPaleGarden": "Only in the Pale Garden",
+  "text.autoconfig.bwpg.option.toggleAnimation": "Show animation when switching shader"
+}

@@ -17,15 +17,21 @@
 	"entrypoints": {
 		"client": [
 			"org.trivait.blackwhitepalegarden.BlackWhitePaleGarden"
+		],
+		"modmenu": [
+			"org.trivait.blackwhitepalegarden.modmenu.ModMenuIntegration"
 		]
 	},
 	"mixins": [
 		"blackwhitepalegarden.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.18.4",
+		"fabricloader": ">=0.16.14",
 		"minecraft": "~1.21.4",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+
+		"cloth-config2": "*",
+		"modmenu": "*"
 	}
 }
