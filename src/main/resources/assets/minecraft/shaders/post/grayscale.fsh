@@ -4,9 +4,11 @@ uniform sampler2D InSampler;
 
 in vec2 texCoord;
 
-uniform float GrayscaleStrength;
-uniform float LightCancel;
-uniform float Gamma;
+layout(std140) uniform GrayscaleConfig {
+    float GrayscaleStrength;
+    float LightCancel;
+    float Gamma;
+};
 
 out vec4 fragColor;
 
