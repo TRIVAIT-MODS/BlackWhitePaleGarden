@@ -91,7 +91,7 @@ public class PaleGardenUtil {
             );
 
             for (int i = 0; i < 20; i++) {
-                client.world.addParticle(
+                client.world.addParticleClient(
                         net.minecraft.particle.ParticleTypes.CLOUD,
                         client.player.getX() + (client.world.random.nextDouble() - 0.5),
                         client.player.getY() + 1,

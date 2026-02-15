@@ -4,13 +4,14 @@ uniform sampler2D InSampler;
 
 in vec2 texCoord;
 
-uniform vec3 Gray;
-
 uniform float GrayscaleStrength;
 uniform float LightCancel;
 uniform float Gamma;
 
 out vec4 fragColor;
+
+// Standard luminance coefficients for grayscale
+const vec3 Gray = vec3(0.299, 0.587, 0.114);
 
 void main() {
     vec4 color = texture(InSampler, texCoord);

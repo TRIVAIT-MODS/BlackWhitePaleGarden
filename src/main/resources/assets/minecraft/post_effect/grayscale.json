@@ -4,7 +4,8 @@
   },
   "passes": [
     {
-      "program": "minecraft:post/grayscale",
+      "vertex_shader": "minecraft:post/blit",
+      "fragment_shader": "minecraft:post/grayscale",
       "inputs": [
         {
           "sampler_name": "In",
@@ -13,15 +14,23 @@
       ],
       "output": "swap",
       "uniforms": [
-        { "name": "GrayscaleStrength", "values": [ 1.0 ] },
-        { "name": "LightCancel", "values": [ 1.5 ] },
-        { "name": "Gamma", "values": [ 1.5 ] }
+        { "name": "GrayscaleStrength", "type": "float", "values": [ 1.0 ] },
+        { "name": "LightCancel", "type": "float", "values": [ 1.5 ] },
+        { "name": "Gamma", "type": "float", "values": [ 1.5 ] }
       ]
     },
     {
-      "program": "minecraft:post/blit",
+      "vertex_shader": "minecraft:post/blit",
+      "fragment_shader": "minecraft:post/blit",
       "inputs": [
         { "sampler_name": "In", "target": "swap" }
+      ],
+      "uniforms": [
+        {
+          "name": "ColorModulate",
+          "type": "vec4",
+          "values": [ 1.0, 1.0, 1.0, 1.0 ]
+        }
       ],
       "output": "minecraft:main"
     }
