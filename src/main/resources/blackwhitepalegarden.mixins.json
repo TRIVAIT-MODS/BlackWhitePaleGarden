@@ -5,7 +5,9 @@
 	"mixins": [
 	],
 	"client": [
-		"GameRendererMixin"
+		"GameRendererMixin",
+		"WorldRendererMixin",
+		"BiomeColorsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
