@@ -5,6 +5,7 @@
 	"mixins": [
 	],
 	"client": [
+		"BiomeColorsMixin",
 		"GameRendererMixin",
 		"WorldRendererMixin"
 	],
