@@ -1,23 +1,11 @@
-#version 150
-
-#moj_import <minecraft:projection.glsl>
-
-in vec4 Position;
-
-layout(std140) uniform SamplerInfo {
-    vec2 OutSize;
-    vec2 InSize;
-};
+#version 330
 
 out vec2 texCoord;
 
-void main(){
-    vec4 outPos = ProjMat * vec4(Position.xy * OutSize, 0.0, 1.0);
-    gl_Position = vec4(outPos.xy, 0.2, 1.0);
+void main() {
+    vec2 uv = vec2((gl_VertexID << 1) & 2, gl_VertexID & 2);
+    vec4 pos = vec4(uv * vec2(2, 2) + vec2(-1, -1), 0, 1);
 
-    vec2 sizeRatio = OutSize / InSize;
-    texCoord = Position.xy;
-    texCoord.x = texCoord.x * sizeRatio.x;
-    texCoord.y = texCoord.y * sizeRatio.y;
-    texCoord.y = sizeRatio.y - texCoord.y;
+    gl_Position = pos;
+    texCoord = uv;
 }
