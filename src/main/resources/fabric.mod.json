@@ -2,16 +2,16 @@
 	"schemaVersion": 1,
 	"id": "blackwhitepalegarden",
 	"version": "${version}",
-	"name": "BlackWhitePaleGarden",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "GrayScale Pale Garden",
+	"description": "A mod that adds grayscale effect to Pale Garden",
 	"authors": [
 		"TRIVAIT"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/user/Trivait",
+		"sources": "https://github.com/TRIVAIT-MODS/BlackWhitePaleGarden"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/blackwhitepalegarden/icon.png",
 	"environment": "client",
 	"entrypoints": {
